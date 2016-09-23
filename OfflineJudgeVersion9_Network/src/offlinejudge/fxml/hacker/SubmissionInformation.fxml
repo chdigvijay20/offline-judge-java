@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offlinejudge.controller.hacker.SubmissionInformationController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="400.0">
+               <children>
+                  <Label text="Submission Information :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="scoresTable" layoutX="190.0" layoutY="61.0" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="taskColumn" prefWidth="150.0" text="Task #" />
+                <TableColumn fx:id="scoreColumn" prefWidth="150.0" text="Score" />
+                  <TableColumn fx:id="resultColumn" prefWidth="300.0" text="Result" />
+              </columns>
+            </TableView>
+            <Button layoutX="463.0" layoutY="540.0" mnemonicParsing="false" text="Back!" />
+         </children>
+         <StackPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </StackPane.margin>
+      </AnchorPane>
+   </children>
+</StackPane>

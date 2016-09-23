@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offlinejudge.controller.problemsetter.ProblemInputController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <GridPane fx:id="problemGridPane" alignment="CENTER" hgap="10.0" minWidth="200.0" prefWidth="648.0" vgap="10.0" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="245.0" minWidth="10.0" prefWidth="159.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="361.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="81.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Problem Code" />
+                  <Label text="Problem Name*" GridPane.rowIndex="1" />
+                  <Label text="Problem Statement" GridPane.rowIndex="2" />
+                  <Label text="Test Cases*" GridPane.rowIndex="3" />
+                  <Label text="Time Limit (In Seconds)" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="codeTextField" minWidth="200.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="nameTextField" onKeyReleased="#toggleNextButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="problemStatementTextField" disable="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="testCaseTextField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="problemBrowseButton" alignment="CENTER" mnemonicParsing="false" onAction="#problemBrowseButtonClicked" text="Browse..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="testCaseBrowseButton" alignment="CENTER" mnemonicParsing="false" onAction="#testCaseBrowseButtonClicked" text="Browse..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="6">
+                     <children>
+                        <Button fx:id="nextButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#nextButtonClicked" text="Next" />
+                        <Region layoutX="263.0" layoutY="30.0" prefHeight="30.0" prefWidth="50.0" />
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                  <Label text="*marked fields are mandatory" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

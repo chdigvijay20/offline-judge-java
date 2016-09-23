@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offlinejudge.controller.MainController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Configure">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Server Address..." />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Offline Judge Help" />
+                        <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="67.0" fitWidth="200.0">
+               <image>
+                  <Image url="/offlinejudge/images/logo.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="sceneHolder" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

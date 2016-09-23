@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="offlinejudge.controller.HomeController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="334.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to ___ offline judge.&#10;&#10;The application can be used to judge a source code given the inputs and their required outputs. The application can show compilation errors, if any, in the given code. Scores can be defined for each input file.&#10;&#10;So are you a problem setter or the hacker?" wrappingWidth="574.916015625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="203.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="problemSetterButton" mnemonicParsing="false" onAction="#problemSetterButtonClicked" text="Problem&#10;Setter" textAlignment="CENTER" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="hackerButton" mnemonicParsing="false" onAction="#hackerButtonClicked" text="Hacker" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</StackPane>
